@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammed Faisal — Developer</title>
+  <meta name="description" content="Mohammed Faisal — Computer Science graduate building full-stack web apps, with a passion for backend, networking and cybersecurity." />
+  <meta name="theme-color" content="#07080c" />
+  <meta property="og:title" content="Mohammed Faisal — Developer" />
+  <meta property="og:description" content="Full-stack developer & cybersecurity enthusiast. Flask, Python, MySQL, React." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307080c'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-weight='700' font-size='28' fill='%237cf5c4'>MF</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Intro loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__text"><span class="loader__prompt">&gt;</span> <span id="loaderText"></span><span class="caret"></span></div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Home">
+      <span class="bracket">&lt;</span>MF<span class="bracket">/&gt;</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about"><span>01.</span>About</a>
+      <a href="#experience"><span>02.</span>Experience</a>
+      <a href="#projects"><span>03.</span>Projects</a>
+      <a href="#skills"><span>04.</span>Skills</a>
+      <a href="#contact"><span>05.</span>Contact</a>
+      <a href="assets/Mohammed-Faisal-Resume.pdf" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">Resume</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="network" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__status reveal"><span class="pulse"></span> Open to internships &amp; entry-level roles</p>
+        <p class="hero__hello mono reveal">Hi, my name is</p>
+        <h1 class="hero__name" aria-label="Mohammed Faisal">
+          <span class="split" data-split>Mohammed</span>
+          <span class="split split--outline" data-split>Faisal.</span>
+        </h1>
+        <h2 class="hero__role reveal">
+          I'm a <span class="typed" id="typed"></span><span class="caret"></span>
+        </h2>
+        <p class="hero__lead reveal">
+          Computer Science graduate who builds full-stack web apps with Python &amp; Flask,
+          and loves the layers underneath — backends, networks and security.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary magnetic"><span>See my work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost magnetic"><span>Get in touch</span></a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span class="mono">scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><i>✦</i><span>Flask</span><i>✦</i><span>MySQL</span><i>✦</i><span>JavaScript</span><i>✦</i>
+        <span>React</span><i>✦</i><span>C++</span><i>✦</i><span>Java</span><i>✦</i><span>PHP</span><i>✦</i>
+        <span>TensorFlow</span><i>✦</i><span>OpenCV</span><i>✦</i><span>NLP</span><i>✦</i><span>Networking</span><i>✦</i>
+        <span>Cybersecurity</span><i>✦</i><span>Git</span><i>✦</i><span>Power BI</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__num mono">01</span>
+        <h2 class="section__title">About me</h2>
+        <span class="section__line"></span>
+      </div>
+
+      <div class="about">
+        <div class="about__text">
+          <p class="reveal">
+            I'm <strong>Mohammed Faisal</strong>, a B.Tech Computer Science graduate from
+            <strong>Jyothi Engineering College, Thrissur</strong>. I enjoy turning messy,
+            manual processes into clean, automated software — from invoice pipelines to
+            attendance systems that email students before it's too late.
+          </p>
+          <p class="reveal">
+            My comfort zone is the backend: <span class="hl">Python, Flask and SQL</span>, glued together
+            with a solid HTML/CSS/JS front end. Lately I've been exploring
+            <span class="hl">machine learning</span> (NLP and computer vision) and I have a strong
+            interest in <span class="hl">networking and cybersecurity</span>.
+          </p>
+          <p class="reveal">
+            I'm looking for opportunities in <strong>software development, cybersecurity or
+            system administration</strong> where I can learn fast and ship real things.
+          </p>
+
+          <div class="stats">
+            <div class="stat reveal"><span class="stat__num" data-count="3" data-suffix="+">0</span><span class="stat__label">Projects built</span></div>
+            <div class="stat reveal"><span class="stat__num" data-count="1">0</span><span class="stat__label">Internship</span></div>
+            <div class="stat reveal"><span class="stat__num" data-count="7.42" data-decimals="2">0</span><span class="stat__label">CGPA / 10</span></div>
+            <div class="stat reveal"><span class="stat__num" data-count="2026">0</span><span class="stat__label">Graduated</span></div>
+          </div>
+        </div>
+
+        <!-- Interactive terminal -->
+        <div class="terminal reveal tilt" id="terminal" data-tilt-max="4">
+          <div class="terminal__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="terminal__title mono">faisal@portfolio: ~</span>
+          </div>
+          <div class="terminal__body mono" id="termBody" tabindex="0" aria-label="Interactive terminal. Type help for commands.">
+            <div id="termOut"></div>
+            <form class="terminal__line" id="termForm" autocomplete="off">
+              <label for="termInput"><span class="t-green">faisal@portfolio</span>:<span class="t-blue">~</span>$</label>
+              <input id="termInput" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command" />
+            </form>
+          </div>
+          <div class="terminal__hint mono">try: <button data-cmd="whoami">whoami</button> <button data-cmd="skills">skills</button> <button data-cmd="projects">projects</button> <button data-cmd="sudo hire faisal">sudo hire faisal</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__num mono">02</span>
+        <h2 class="section__title">Experience</h2>
+        <span class="section__line"></span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__rail"><span class="timeline__fill" id="timelineFill"></span></div>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__meta mono">Apr 2025 — Jul 2025</div>
+          <div class="card tl-item__card spotlight">
+            <h3>Full-Stack Developer Intern <span class="at">@ Orion Informatics</span></h3>
+            <p class="muted">Built a production web app for managing and delivering invoice files.</p>
+            <ul class="ticks">
+              <li>Designed and developed a <strong>full-stack invoice file management</strong> web app using Flask.</li>
+              <li>Implemented <strong>multi-file upload</strong> with document mapping, <strong>ZIP archiving</strong> and automated <strong>email delivery via SMTP</strong>.</li>
+              <li>Integrated frontend and backend end-to-end with HTML, CSS, Bootstrap, SQL, Pandas and XAMPP.</li>
+            </ul>
+            <div class="tags"><span>Flask</span><span>Python</span><span>Pandas</span><span>SQL</span><span>Bootstrap</span><span>SMTP</span></div>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__meta mono">Nov 2022 — Jul 2026</div>
+          <div class="card tl-item__card spotlight">
+            <h3>B.Tech, Computer Science <span class="at">@ Jyothi Engineering College</span></h3>
+            <p class="muted">Thrissur, Kerala · CGPA 7.42 / 10</p>
+            <ul class="ticks">
+              <li>Core CS: data structures, OOP (C++, Java), databases, computer networks and operating systems.</li>
+              <li>Built academic projects in NLP, computer vision and web automation.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__meta mono">School</div>
+          <div class="card tl-item__card spotlight">
+            <h3>St. Mary's E.M. School <span class="at">@ Kozhikode</span></h3>
+            <p class="muted">Class 10 (ICSE): <strong>94.50%</strong> · Class 12 (ISC): <strong>82.50%</strong></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__num mono">03</span>
+        <h2 class="section__title">Things I've built</h2>
+        <span class="section__line"></span>
+      </div>
+
+      <div class="projects">
+        <article class="project card spotlight tilt reveal">
+          <div class="project__visual project__visual--voice" aria-hidden="true">
+            <div class="wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="code-float mono"><span class="t-purple">def</span> <span class="t-blue">sort_list</span>(items):</div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__label mono">AI · NLP</span>
+              <div class="project__links">
+                <a href="https://github.com/faisssss" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><use href="#i-github"/></svg></a>
+              </div>
+            </div>
+            <h3>Voice-to-Code Converter</h3>
+            <p>An AI-powered system that turns spoken, natural-language instructions into executable code.
+              It recognises the <em>intent</em> behind each command and stays <em>context-aware</em>, interpreting
+              new instructions against the existing code and earlier commands.</p>
+            <div class="tags"><span>Python</span><span>NLP</span><span>Intent Recognition</span><span>Speech</span></div>
+          </div>
+        </article>
+
+        <article class="project card spotlight tilt reveal">
+          <div class="project__visual project__visual--attend" aria-hidden="true">
+            <div class="grid-cal">
+              <i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i>
+              <i class="on"></i><i class="on"></i><i class="low"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i>
+              <i class="on"></i><i class="low"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="low"></i>
+            </div>
+            <div class="mail-fly">✉</div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__label mono">Web · Automation</span>
+              <div class="project__links">
+                <a href="https://github.com/faisssss" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><use href="#i-github"/></svg></a>
+              </div>
+            </div>
+            <h3>Attendance App</h3>
+            <p>Lets faculty record attendance, calculates each student's percentage and
+              <em>automatically emails</em> anyone falling below the threshold — cutting out the manual
+              back-and-forth between faculty and students.</p>
+            <div class="tags"><span>Python</span><span>MySQL</span><span>XAMPP</span><span>SMTP</span><span>HTML/CSS</span></div>
+          </div>
+        </article>
+
+        <article class="project card spotlight tilt reveal">
+          <div class="project__visual project__visual--cv" aria-hidden="true">
+            <div class="note">
+              <span class="note__sym">₹</span>
+              <span class="note__val mono">500</span>
+              <span class="scan"></span>
+              <span class="box"><b class="mono">INR · 500 · 98.2%</b></span>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__label mono">ML · Computer Vision <span class="badge">In progress</span></span>
+              <div class="project__links">
+                <a href="https://github.com/faisssss" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20"><use href="#i-github"/></svg></a>
+              </div>
+            </div>
+            <h3>Currency Detection Web App</h3>
+            <p>Upload a photo of a banknote and the app identifies the <em>currency</em> and its
+              <em>denomination</em>. An image-classification model built with TensorFlow/Keras and OpenCV,
+              served behind a React interface with clear, categorised results.</p>
+            <div class="tags"><span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>React</span><span>Python</span></div>
+          </div>
+        </article>
+
+        <article class="project card spotlight tilt reveal">
+          <div class="project__visual project__visual--invoice" aria-hidden="true">
+            <div class="files"><span>PDF</span><span>XLS</span><span>PDF</span></div>
+            <div class="zip mono">.zip</div>
+          </div>
+          <div class="project__body">
+            <div class="project__top">
+              <span class="project__label mono">Internship · Full-stack</span>
+            </div>
+            <h3>Invoice File Manager</h3>
+            <p>Built during my internship at Orion Informatics: bulk-upload invoices, map documents
+              to clients, bundle them into ZIP archives and deliver them by email — all from one Flask app.</p>
+            <div class="tags"><span>Flask</span><span>Pandas</span><span>SQL</span><span>Bootstrap</span><span>SMTP</span></div>
+          </div>
+        </article>
+      </div>
+
+      <p class="more reveal">More on <a href="https://github.com/faisssss" target="_blank" rel="noopener" class="link">my GitHub →</a></p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__num mono">04</span>
+        <h2 class="section__title">Skills &amp; toolkit</h2>
+        <span class="section__line"></span>
+      </div>
+
+      <div class="bento">
+        <div class="bento__cell bento__cell--wide card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>languages</h3>
+          <div class="langs">
+            <div class="lang"><span class="lang__glyph mono">py</span><strong>Python</strong><small>Flask · ML · automation</small></div>
+            <div class="lang"><span class="lang__glyph mono">c++</span><strong>C++</strong><small>OOP · DSA</small></div>
+            <div class="lang"><span class="lang__glyph mono">jv</span><strong>Java</strong><small>OOP</small></div>
+            <div class="lang"><span class="lang__glyph mono">js</span><strong>JavaScript</strong><small>Web · React</small></div>
+            <div class="lang"><span class="lang__glyph mono">sql</span><strong>SQL</strong><small>MySQL</small></div>
+            <div class="lang"><span class="lang__glyph mono">php</span><strong>PHP</strong><small>Web backends</small></div>
+          </div>
+        </div>
+
+        <div class="bento__cell card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>web</h3>
+          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Flask</span><span>React</span><span>Bootstrap</span></div>
+        </div>
+
+        <div class="bento__cell card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>data &amp; ml</h3>
+          <div class="chips"><span>MySQL</span><span>Pandas</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>NLP</span></div>
+        </div>
+
+        <div class="bento__cell card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>tools</h3>
+          <div class="chips"><span>Git</span><span>VS Code</span><span>XAMPP</span><span>Cisco Packet Tracer</span><span>Excel</span><span>Power BI</span></div>
+        </div>
+
+        <div class="bento__cell card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>interests</h3>
+          <div class="chips"><span>Cybersecurity</span><span>Networking</span><span>Backend</span><span>System Admin</span></div>
+        </div>
+
+        <div class="bento__cell card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>soft skills</h3>
+          <div class="chips"><span>Analytical thinking</span><span>Time management</span><span>Hard working</span></div>
+        </div>
+
+        <div class="bento__cell bento__cell--wide card spotlight reveal">
+          <h3 class="bento__title"><span class="mono t-green">~/</span>certifications</h3>
+          <ul class="certs">
+            <li><span class="cert__icon">◆</span><div><strong>Web Development Course</strong><small>Academor · 2 months · HTML, CSS, JS</small></div></li>
+            <li><span class="cert__icon">◆</span><div><strong>JS &amp; ReactJS Bootcamp</strong><small>7-day intensive</small></div></li>
+            <li><span class="cert__icon">◆</span><div><strong>Excel &amp; Power BI</strong><small>Pivot tables, formulas &amp; interactive dashboards</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <p class="section__num mono reveal">05. What's next?</p>
+      <h2 class="contact__title reveal">Let's build<br /><span class="gradient-text">something together.</span></h2>
+      <p class="contact__lead reveal">
+        I'm actively looking for internships and entry-level roles. Whether you have an
+        opportunity, a question, or just want to say hi — my inbox is open.
+      </p>
+      <div class="contact__actions reveal">
+        <a href="mailto:mhdfaisal9061@gmail.com" class="btn btn--primary btn--lg magnetic"><span>Say hello</span></a>
+        <button class="btn btn--ghost btn--lg copy" id="copyEmail" data-email="mhdfaisal9061@gmail.com">
+          <span class="copy__text mono">mhdfaisal9061@gmail.com</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+      <div class="socials reveal">
+        <a href="https://github.com/faisssss" target="_blank" rel="noopener" aria-label="GitHub" class="magnetic"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn" class="magnetic"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:mhdfaisal9061@gmail.com" aria-label="Email" class="magnetic"><svg viewBox="0 0 24 24" width="22" height="22"><use href="#i-mail"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>Designed &amp; built by Mohammed Faisal</span>
+    <span>© <span id="year"></span></span>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm18 2-10 7L2 6"/></symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
